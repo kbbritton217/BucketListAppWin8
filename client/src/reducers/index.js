@@ -5,9 +5,8 @@ import {reducer as formReducer} from 'redux-form';
 
 //Define the properties of our Application State here
 	const rootReducer = combineReducers({
-  		bands: BandsReducer,
+  		form: formReducer,
   		//state: (state = {}) => state
-  		SelectedBand: SelectedBand
 	});
 
 export default rootReducer;

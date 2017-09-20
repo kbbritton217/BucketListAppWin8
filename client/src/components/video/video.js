@@ -8,7 +8,7 @@ import VideoDetail from './video-detail';
 const API_KEY = 'AIzaSyAu9Or0VQ5nRUfs2jzxMteIZXgOuAd9Cqs';
 
 class Video extends Component {
-	constructor(props);{
+	constructor(props) {
 		super(props);
 		this.state = {
 			videos: [],
