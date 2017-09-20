@@ -7,7 +7,7 @@ import BandList from '../containers/BandList';
     			return (
       			<div>
 	      			<NavBarHeader />
-	      			<BandList />
+  	      			<BandList />
       			</div>
     		);
   		}
