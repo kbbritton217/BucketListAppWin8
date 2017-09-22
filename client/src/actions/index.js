@@ -5,7 +5,7 @@ import {
 	UNAUTH_USER, 
 	AUTH_ERROR,
 	//FETCH_MESSAGE,
-	//FETCH_POSTS,
+	FETCH_POSTS,
 	CREATE_POSTS,
 	//FETCH_POST,
 	//DELETE_POST
@@ -76,7 +76,20 @@ export function createPost(props) {
 				type: CREATE_POSTS,
 				payload: request
 			});
-			browserHistory.push('/newitem');
+			browserHistory.push('/items');
+		});
+	}
+}
+
+export function fetchPosts() {
+	return function(dispatch){
+		axios.get(`${ROOT_URL}/items`, config )
+		.then( (response) => {
+			console.log("Response", response)
+			dispatch({
+				type: FETCH_POSTS,
+				payload: response
+			});
 		});
 	}
 }
